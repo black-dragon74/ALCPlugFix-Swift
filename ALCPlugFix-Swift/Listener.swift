@@ -13,8 +13,8 @@ class Listener {
     private var defaultDevice: AudioDeviceID = 0
     private var dataSourceID: UInt32 = 0
 
-    private var defaultSize = UInt32(MemoryLayout<AudioObjectID>.size)
-    private var dataSourceSize = UInt32(MemoryLayout<AudioObjectID>.size)
+    private var defaultSize = UInt32(MemoryLayout<AudioDeviceID>.size)
+    private var dataSourceSize = UInt32(MemoryLayout<UInt32>.size)
 
     private var defaultAddress = AudioObjectPropertyAddress(mSelector: kAudioHardwarePropertyDefaultOutputDevice, mScope: kAudioObjectPropertyScopeGlobal, mElement: kAudioObjectPropertyElementMaster)
     private var sourceAddress = AudioObjectPropertyAddress(mSelector: kAudioDevicePropertyDataSource, mScope: kAudioDevicePropertyScopeOutput, mElement: kAudioObjectPropertyElementMaster)

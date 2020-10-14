@@ -21,7 +21,6 @@ private func lockAndLoad() {
     for (index, _) in CommandLine.arguments.enumerated() {
         if CommandLine.arguments.indices.contains(index + 1) {
             let plistFile = CommandLine.arguments[index + 1]
-            print(plistFile)
             do {
                 try ALCPlugFix(withPlistFile: URL(fileURLWithPath: plistFile)).start()
 

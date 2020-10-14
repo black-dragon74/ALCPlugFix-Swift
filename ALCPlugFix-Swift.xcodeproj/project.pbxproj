@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0139EEF92537282100D42E15 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139EEF82537282100D42E15 /* Utils.swift */; };
+		0139EEFD253728E000D42E15 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139EEFC253728E000D42E15 /* Command.swift */; };
+		01821FA925372B4B009C92A3 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B1AD3225372242009C072C /* CoreAudio.framework */; };
+		01821FC125372ECB009C92A3 /* ALCPlugFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01821FC025372ECB009C92A3 /* ALCPlugFix.swift */; };
+		01B1AD1425370B3A009C072C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1AD1325370B3A009C072C /* main.swift */; };
+		01B1AD2125370EF2009C072C /* HDAVerbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1AD2025370EF2009C072C /* HDAVerbModel.swift */; };
+		01B1AD26253710E9009C072C /* ListenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1AD25253710E9009C072C /* ListenerDelegate.swift */; };
+		01B1AD2A2537112F009C072C /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1AD292537112F009C072C /* Listener.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		01B1AD0E25370B3A009C072C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0139EEF82537282100D42E15 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0139EEFC253728E000D42E15 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		01821FC025372ECB009C92A3 /* ALCPlugFix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALCPlugFix.swift; sourceTree = "<group>"; };
+		01A752D125374D1700A7A109 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
+		01A752DA2537680E00A7A109 /* alc_295.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = alc_295.plist; sourceTree = "<group>"; };
+		01A752DB2537694300A7A109 /* com.black-dragon74.ALCPlugFix.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "com.black-dragon74.ALCPlugFix.plist"; sourceTree = "<group>"; };
+		01A752DC2537718B00A7A109 /* alc-verb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "alc-verb"; sourceTree = "<group>"; };
+		01B1AD1025370B3A009C072C /* ALCPlugFix-Swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ALCPlugFix-Swift"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01B1AD1325370B3A009C072C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		01B1AD2025370EF2009C072C /* HDAVerbModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDAVerbModel.swift; sourceTree = "<group>"; };
+		01B1AD25253710E9009C072C /* ListenerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerDelegate.swift; sourceTree = "<group>"; };
+		01B1AD292537112F009C072C /* Listener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listener.swift; sourceTree = "<group>"; };
+		01B1AD3225372242009C072C /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01B1AD0D25370B3A009C072C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01821FA925372B4B009C92A3 /* CoreAudio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0139EEF7253727E800D42E15 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0139EEF82537282100D42E15 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		01A752D025374CF100A7A109 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				01A752DC2537718B00A7A109 /* alc-verb */,
+				01A752DB2537694300A7A109 /* com.black-dragon74.ALCPlugFix.plist */,
+				01A752DA2537680E00A7A109 /* alc_295.plist */,
+				01A752D125374D1700A7A109 /* install.sh */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		01B1AD0725370B3A009C072C = {
+			isa = PBXGroup;
+			children = (
+				01B1AD1225370B3A009C072C /* ALCPlugFix-Swift */,
+				01B1AD1125370B3A009C072C /* Products */,
+				01B1AD3125372242009C072C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		01B1AD1125370B3A009C072C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01B1AD1025370B3A009C072C /* ALCPlugFix-Swift */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01B1AD1225370B3A009C072C /* ALCPlugFix-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				01A752D025374CF100A7A109 /* Misc */,
+				0139EEF7253727E800D42E15 /* Utils */,
+				01B1AD24253710B9009C072C /* Protocols */,
+				01B1AD1C25370B88009C072C /* Models */,
+				01B1AD1325370B3A009C072C /* main.swift */,
+				0139EEFC253728E000D42E15 /* Command.swift */,
+				01B1AD292537112F009C072C /* Listener.swift */,
+				01821FC025372ECB009C92A3 /* ALCPlugFix.swift */,
+			);
+			path = "ALCPlugFix-Swift";
+			sourceTree = "<group>";
+		};
+		01B1AD1C25370B88009C072C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				01B1AD2025370EF2009C072C /* HDAVerbModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01B1AD24253710B9009C072C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				01B1AD25253710E9009C072C /* ListenerDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		01B1AD3125372242009C072C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01B1AD3225372242009C072C /* CoreAudio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01B1AD0F25370B3A009C072C /* ALCPlugFix-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01B1AD1725370B3A009C072C /* Build configuration list for PBXNativeTarget "ALCPlugFix-Swift" */;
+			buildPhases = (
+				01B1AD0C25370B3A009C072C /* Sources */,
+				01B1AD0D25370B3A009C072C /* Frameworks */,
+				01B1AD0E25370B3A009C072C /* CopyFiles */,
+				01A752DD2537737B00A7A109 /* Archive */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ALCPlugFix-Swift";
+			productName = "ALCPlugFix-Swift";
+			productReference = 01B1AD1025370B3A009C072C /* ALCPlugFix-Swift */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01B1AD0825370B3A009C072C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					01B1AD0F25370B3A009C072C = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 01B1AD0B25370B3A009C072C /* Build configuration list for PBXProject "ALCPlugFix-Swift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01B1AD0725370B3A009C072C;
+			productRefGroup = 01B1AD1125370B3A009C072C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01B1AD0F25370B3A009C072C /* ALCPlugFix-Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01A752DD2537737B00A7A109 /* Archive */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Archive;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${PROJECT_DIR}/${PROJECT_NAME}/Misc/\"\ncp alc-verb \"${TARGET_BUILD_DIR}\"\ncp install.sh \"${TARGET_BUILD_DIR}\"\ncp com.black-dragon74.ALCPlugFix.plist \"${TARGET_BUILD_DIR}\"\n\ncd \"${TARGET_BUILD_DIR}\"\n\ndist=(\"${FULL_PRODUCT_NAME}\")\ndist+=(\"alc-verb\")\ndist+=(\"install.sh\")\ndist+=(\"com.black-dragon74.ALCPlugFix.plist\")\n\narchive=\"${PRODUCT_NAME}-$(echo $CONFIGURATION | tr /a-z/ /A-Z/).zip\"\nrm -rf *.zip\nif [ \"$CONFIGURATION\" == \"Release\" ]; then\n  strip -x -T \"${EXECUTABLE_PATH}\" &>/dev/null || strip -x \"${EXECUTABLE_PATH}\"\nfi\nzip -qry -FS \"${archive}\" \"${dist[@]}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01B1AD0C25370B3A009C072C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0139EEFD253728E000D42E15 /* Command.swift in Sources */,
+				0139EEF92537282100D42E15 /* Utils.swift in Sources */,
+				01B1AD2125370EF2009C072C /* HDAVerbModel.swift in Sources */,
+				01B1AD1425370B3A009C072C /* main.swift in Sources */,
+				01B1AD26253710E9009C072C /* ListenerDelegate.swift in Sources */,
+				01821FC125372ECB009C92A3 /* ALCPlugFix.swift in Sources */,
+				01B1AD2A2537112F009C072C /* Listener.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		01B1AD1525370B3A009C072C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		01B1AD1625370B3A009C072C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		01B1AD1825370B3A009C072C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		01B1AD1925370B3A009C072C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01B1AD0B25370B3A009C072C /* Build configuration list for PBXProject "ALCPlugFix-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01B1AD1525370B3A009C072C /* Debug */,
+				01B1AD1625370B3A009C072C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01B1AD1725370B3A009C072C /* Build configuration list for PBXNativeTarget "ALCPlugFix-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01B1AD1825370B3A009C072C /* Debug */,
+				01B1AD1925370B3A009C072C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01B1AD0825370B3A009C072C /* Project object */;
+}

@@ -59,16 +59,13 @@ cleanUpOldInstall 2>/dev/null
 
 echo "**            Copying new files             **"
 sudo cp "$DIR/ALCPlugFix-Swift" /usr/local/bin/ALCPlugFix || abort "Failed to copy ALCPlugFix"
-sudo cp "$DIR/alc-verb" /usr/local/bin || abort "Failed to copy alc-verb"
 sudo cp "$DIR/com.black-dragon74.ALCPlugFix.plist" /Library/LaunchAgents  || abort "Failed to copy launchd plist file"
 
 echo "**          Setting permissions             **"
 sudo chmod 755 /usr/local/bin/ALCPlugFix
-sudo chmod 755 /usr/local/bin/alc-verb
 sudo chmod 644 /Library/LaunchAgents/com.black-dragon74.ALCPlugFix.plist
 
 sudo chown root:wheel /usr/local/bin/ALCPlugFix
-sudo chown root:wheel /usr/local/bin/alc-verb
 sudo chown root:wheel /Library/LaunchAgents/com.black-dragon74.ALCPlugFix.plist
 
 echo "**          Loading launch daemon           **"

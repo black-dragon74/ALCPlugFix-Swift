@@ -12,12 +12,18 @@ class ALCPlugFix {
     private let listener = Listener()
     private let alcVerbPath = "/usr/local/bin/alc-verb"
     private let hdaVerbs: [HDAVerbModel]
+    private var io_service : io_service_t = 0
 
     init(withPlistFile plist: URL) throws {
         hdaVerbs = try Command.getCommands(fromPlistFile: plist)
     }
 
-    func start() {
+    func start(_ provider : String = "ALCUserClientProvider") {
+        io_service = IOServiceGetMatchingService(kIOMasterPortDefault, IOServiceMatching(provider))
+        guard io_service != 0 else {
+            print("Provider \(provider) not available!")
+            return
+        }
         // If there are verbs to be sent on boot, now is the time
         processOnBootVerbs()
 
@@ -41,7 +47,17 @@ class ALCPlugFix {
     private func sendHDAVerb(_ command: HDAVerbModel) {
         // Otherwise, execute the commands
         print("Executing command labelled: \(command.comment ?? "No Description")")
-        runShellCommand(alcVerbPath, args: [command.nodeID, command.verb, command.param])
+        var connect : io_connect_t = 0;
+        guard kIOReturnSuccess == IOServiceOpen(io_service, mach_task_self_, 0, &connect),
+              connect != 0 else {
+            print("Failed to connect to ALCUserClientProvider")
+            return
+        }
+        var input : [UInt64] = [command.nodeID, command.verb, command.param]
+        var outputSize : UInt32 = 1;
+        var output : [UInt64] = [0]
+        _ = IOConnectCallScalarMethod(connect, UInt32(0), &input, 3, &output, &outputSize)
+        IOServiceClose(connect)
     }
 
     // MARK: - Notification handlers

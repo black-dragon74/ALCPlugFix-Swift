@@ -46,16 +46,14 @@ class ALCPlugFix {
     private func sendHDAVerb(_ command: HDAVerbModel) {
         // Otherwise, execute the commands
         print("Executing command labelled: \(command.comment ?? "No Description")")
-        var connect: io_connect_t = 0;
+        var connect: io_connect_t = 0
         guard kIOReturnSuccess == IOServiceOpen(io_service, mach_task_self_, 0, &connect),
               connect != 0 else {
             print("Failed to connect to ALCUserClientProvider")
             return
         }
         var input: [UInt64] = [command.nodeID, command.verb, command.param]
-        var outputSize : UInt32 = 1
-        var output: [UInt64] = [0]
-        if kIOReturnSuccess != IOConnectCallScalarMethod(connect, UInt32(0), &input, 3, &output, &outputSize) {
+        if kIOReturnSuccess != IOConnectCallScalarMethod(connect, UInt32(0), &input, 3, nil, nil) {
             print("Failed to execute HDA verb")
         }
         IOServiceClose(connect)

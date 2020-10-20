@@ -75,6 +75,6 @@ func getUint64Verb(from stringCommand: String) -> UInt64 {
 extension String {
     // To be used only in ALCPlugFix
     func toUInt64() -> UInt64 {
-        return UInt64(self.replacingOccurrences(of: "0x", with: "")) ?? 0
+        return UInt64(self.replacingOccurrences(of: "0x", with: ""), radix: 16) ?? 0
     }
 }

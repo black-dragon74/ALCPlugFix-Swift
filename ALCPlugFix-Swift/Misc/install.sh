@@ -19,10 +19,6 @@ function cleanUpOldInstall() {
     # Remove any existing alc-verb install
     sudo launchctl unload /Library/LaunchAgents/com.black-dragon74.ALCPlugFix.plist
     sudo rm -rf /Library/LaunchAgents/com.black-dragon74.ALCPlugFix.plist
-    
-    # Clean up old clients
-    sudo rm -rf $(which alc-verb)
-    sudo rm -rf $(which hda-verb)
 }
 
 # Function that exits with an error code and message

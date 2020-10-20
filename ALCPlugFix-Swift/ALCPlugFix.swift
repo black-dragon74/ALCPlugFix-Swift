@@ -18,11 +18,13 @@ class ALCPlugFix {
     }
 
     func start(_ provider: String = "ALCUserClientProvider") {
+        // Connect to provider
         io_service = IOServiceGetMatchingService(kIOMasterPortDefault, IOServiceMatching(provider))
         guard io_service != 0 else {
             print("Provider \(provider) not available!")
             exit(1)
         }
+        
         // If there are verbs to be sent on boot, now is the time
         processOnBootVerbs()
 
@@ -46,17 +48,27 @@ class ALCPlugFix {
     private func sendHDAVerb(_ command: HDAVerbModel) {
         // Otherwise, execute the commands
         print("Executing command labelled: \(command.comment ?? "No Description")")
+        
         var connect: io_connect_t = 0
         guard kIOReturnSuccess == IOServiceOpen(io_service, mach_task_self_, 0, &connect),
               connect != 0 else {
             print("Failed to connect to ALCUserClientProvider")
-            return
+            exit(1)
         }
-        var input: [UInt64] = [command.nodeID, command.verb, command.param]
-        if kIOReturnSuccess != IOConnectCallScalarMethod(connect, UInt32(0), &input, 3, nil, nil) {
+        
+        var input: [UInt64] = [
+            command.nodeID.toUInt64(),
+            getUint64Verb(from: command.verb),
+            command.param.toUInt64()
+        ]
+        
+        var outputCount: UInt32 = 1
+        var output: UInt64 = 0
+        
+        if kIOReturnSuccess != IOConnectCallScalarMethod(connect, 0, &input, 3, &output, &outputCount) {
+            print(input)
             print("Failed to execute HDA verb")
         }
-        IOServiceClose(connect)
     }
 
     // MARK: - Notification handlers

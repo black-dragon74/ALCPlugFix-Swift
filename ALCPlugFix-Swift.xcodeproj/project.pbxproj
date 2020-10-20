@@ -14,6 +14,7 @@
 		01B1AD2125370EF2009C072C /* HDAVerbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1AD2025370EF2009C072C /* HDAVerbModel.swift */; };
 		01B1AD26253710E9009C072C /* ListenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1AD25253710E9009C072C /* ListenerDelegate.swift */; };
 		01B1AD2A2537112F009C072C /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1AD292537112F009C072C /* Listener.swift */; };
+		01C9D9C4253EFF5200E475B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9D9C3253EFF5200E475B0 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,7 @@
 		01B1AD25253710E9009C072C /* ListenerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerDelegate.swift; sourceTree = "<group>"; };
 		01B1AD292537112F009C072C /* Listener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listener.swift; sourceTree = "<group>"; };
 		01B1AD3225372242009C072C /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		01C9D9C3253EFF5200E475B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		01B1AD1225370B3A009C072C /* ALCPlugFix-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				01C9D9C2253EFF3E00E475B0 /* Constants */,
 				01A752D025374CF100A7A109 /* Misc */,
 				01B1AD24253710B9009C072C /* Protocols */,
 				01B1AD1C25370B88009C072C /* Models */,
@@ -117,6 +120,14 @@
 				01B1AD3225372242009C072C /* CoreAudio.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01C9D9C2253EFF3E00E475B0 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				01C9D9C3253EFF5200E475B0 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				01B1AD2125370EF2009C072C /* HDAVerbModel.swift in Sources */,
 				01B1AD1425370B3A009C072C /* main.swift in Sources */,
 				01B1AD26253710E9009C072C /* ListenerDelegate.swift in Sources */,
+				01C9D9C4253EFF5200E475B0 /* Constants.swift in Sources */,
 				01821FC125372ECB009C92A3 /* ALCPlugFix.swift in Sources */,
 				01B1AD2A2537112F009C072C /* Listener.swift in Sources */,
 			);

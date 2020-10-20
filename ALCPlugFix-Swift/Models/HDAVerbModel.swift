@@ -10,9 +10,9 @@ import Foundation
 struct HDAVerbModel: Codable {
     let enabled: Bool               // Whether the command is supposed to be executed or not, overrides all conditions
     let comment: String?            // Human readable description of the command
-    let nodeID: String              // Node id of the codec
-    let verb: String                // Verb selector (see hdaverb.h)
-    let param: String               // The command for the node
+    let nodeID: UInt64              // Node id of the codec
+    let verb: UInt64                // Verb selector (see hdaverb.h)
+    let param: UInt64               // The command for the node
     let onBoot: Bool                // Send verb on boot (at lauchd load actually)
     let onWake: Bool                // Send verb when machine wakes from sleep
     let onConnect: Bool             // Send verb on headphone plug in

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0139EEF92537282100D42E15 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139EEF82537282100D42E15 /* Utils.swift */; };
 		0139EEFD253728E000D42E15 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139EEFC253728E000D42E15 /* Command.swift */; };
 		01821FA925372B4B009C92A3 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B1AD3225372242009C072C /* CoreAudio.framework */; };
 		01821FC125372ECB009C92A3 /* ALCPlugFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01821FC025372ECB009C92A3 /* ALCPlugFix.swift */; };
@@ -30,13 +29,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0139EEF82537282100D42E15 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0139EEFC253728E000D42E15 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		01821FC025372ECB009C92A3 /* ALCPlugFix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALCPlugFix.swift; sourceTree = "<group>"; };
 		01A752D125374D1700A7A109 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		01A752DA2537680E00A7A109 /* alc_295.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = alc_295.plist; sourceTree = "<group>"; };
 		01A752DB2537694300A7A109 /* com.black-dragon74.ALCPlugFix.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "com.black-dragon74.ALCPlugFix.plist"; sourceTree = "<group>"; };
-		01A752DC2537718B00A7A109 /* alc-verb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "alc-verb"; sourceTree = "<group>"; };
 		01B1AD1025370B3A009C072C /* ALCPlugFix-Swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ALCPlugFix-Swift"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B1AD1325370B3A009C072C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		01B1AD2025370EF2009C072C /* HDAVerbModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDAVerbModel.swift; sourceTree = "<group>"; };
@@ -57,18 +54,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0139EEF7253727E800D42E15 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				0139EEF82537282100D42E15 /* Utils.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		01A752D025374CF100A7A109 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				01A752DC2537718B00A7A109 /* alc-verb */,
 				01A752DB2537694300A7A109 /* com.black-dragon74.ALCPlugFix.plist */,
 				01A752DA2537680E00A7A109 /* alc_295.plist */,
 				01A752D125374D1700A7A109 /* install.sh */,
@@ -97,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				01A752D025374CF100A7A109 /* Misc */,
-				0139EEF7253727E800D42E15 /* Utils */,
 				01B1AD24253710B9009C072C /* Protocols */,
 				01B1AD1C25370B88009C072C /* Models */,
 				01B1AD1325370B3A009C072C /* main.swift */,
@@ -212,7 +199,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0139EEFD253728E000D42E15 /* Command.swift in Sources */,
-				0139EEF92537282100D42E15 /* Utils.swift in Sources */,
 				01B1AD2125370EF2009C072C /* HDAVerbModel.swift in Sources */,
 				01B1AD1425370B3A009C072C /* main.swift in Sources */,
 				01B1AD26253710E9009C072C /* ListenerDelegate.swift in Sources */,

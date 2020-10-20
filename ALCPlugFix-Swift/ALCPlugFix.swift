@@ -66,8 +66,9 @@ class ALCPlugFix {
         var output: UInt64 = 0
         
         if kIOReturnSuccess != IOConnectCallScalarMethod(connect, 0, &input, 3, &output, &outputCount) {
-            print(input)
             print("Failed to execute HDA verb")
+        } else {
+            print("Output: \(output)")
         }
     }
 

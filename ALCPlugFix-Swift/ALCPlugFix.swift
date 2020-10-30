@@ -24,7 +24,7 @@ class ALCPlugFix {
             print("Provider \(provider) not available!")
             exit(1)
         }
-        
+
         // If there are verbs to be sent on boot, now is the time
         processOnBootVerbs()
 
@@ -47,29 +47,28 @@ class ALCPlugFix {
     }
 
     private func sendHDAVerb(_ command: HDAVerbModel) {
-        // Otherwise, execute the commands
         print("Executing command labelled: \(command.comment ?? "No Description")")
-        
+
         var connect: io_connect_t = 0
         guard kIOReturnSuccess == IOServiceOpen(io_service, mach_task_self_, 0, &connect),
               connect != 0 else {
             print("Failed to connect to ALCUserClientProvider")
             exit(1)
         }
-        
+
         var input: [UInt64] = [
             command.nodeID.toUInt64(),
             getUint64Verb(from: command.verb),
             command.param.toUInt64()
         ]
-        
+
         var outputCount: UInt32 = 1
         var output: UInt64 = 0
-        
+
         if kIOReturnSuccess != IOConnectCallScalarMethod(connect, 0, &input, 3, &output, &outputCount) {
-            print("Failed to execute HDA verb")
+            print("Failed to execute HDA verb\n")
         } else {
-            print("Output: \(output)")
+            print("Output: \(output)\n")
         }
     }
 
@@ -77,15 +76,17 @@ class ALCPlugFix {
 
     @objc private func handleWake(_ notification: NSNotification) {
         print("ALCPlugFix::machineDidWake")
+
         hdaVerbs.filter {
             $0.onWake && $0.enabled
         }.forEach {
             sendHDAVerb($0)
         }
     }
-    
+
     @objc private func handleSleep(_ notification: NSNotification) {
-        print("ALCPlugFix::machineDidWake")
+        print("ALCPlugFix::machineWillSleep")
+
         hdaVerbs.filter {
             $0.onSleep && $0.enabled
         }.forEach {
@@ -99,7 +100,7 @@ class ALCPlugFix {
 extension ALCPlugFix: ListenerDelegate {
     func headphoneDidConnect() {
         print("ALCPlugFix::headphoneDidConnect")
-        // Only if the command is supposed to be executed on connect and is enabled
+
         hdaVerbs.filter {
             $0.onConnect && $0.enabled
         }.forEach {
@@ -109,9 +110,29 @@ extension ALCPlugFix: ListenerDelegate {
 
     func headphoneDidDisconnect() {
         print("ALCPlugFix::headphoneDidDisconnect")
-        // Only if the command is supposed to be executed on disconnect
+
         hdaVerbs.filter {
             $0.onDisconnect && $0.enabled
+        }.forEach {
+            sendHDAVerb($0)
+        }
+    }
+
+    func audioSourceDidMute() {
+        print("ALCPlugFix::audioSourceDidMute")
+
+        hdaVerbs.filter {
+            $0.onMute && $0.enabled
+        }.forEach {
+            sendHDAVerb($0)
+        }
+    }
+
+    func audioSourceDidUnmute() {
+        print("ALCPlugFix::audioSourceDidUnmute")
+
+        hdaVerbs.filter {
+            $0.onUnmute && $0.enabled
         }.forEach {
             sendHDAVerb($0)
         }

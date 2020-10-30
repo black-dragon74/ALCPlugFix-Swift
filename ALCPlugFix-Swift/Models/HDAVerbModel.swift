@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HDAVerbModel: Codable {
+struct HDAVerbModel: Codable, Equatable {
     let enabled: Bool               // Whether the command is supposed to be executed or not, overrides all conditions
     let comment: String?            // Human readable description of the command
     let nodeID: String              // Node id of the codec
@@ -18,6 +18,8 @@ struct HDAVerbModel: Codable {
     let onSleep: Bool               // Send verb when machine goes to sleep
     let onConnect: Bool             // Send verb on headphone plug in
     let onDisconnect: Bool          // Send verb on headphone plug out
+    let onMute: Bool                // Send verb on source mute
+    let onUnmute: Bool              // Send verb on source unmute
 
     // For easy decoding
     enum CodingKeys: String, CodingKey {
@@ -31,5 +33,7 @@ struct HDAVerbModel: Codable {
         case onSleep = "On Sleep"
         case onConnect = "On Connect"
         case onDisconnect = "On Disconnect"
+        case onMute = "On Mute"
+        case onUnmute = "On Unmute"
     }
 }

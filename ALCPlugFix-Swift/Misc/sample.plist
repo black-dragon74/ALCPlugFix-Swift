@@ -15,7 +15,11 @@
 		<true/>
 		<key>On Disconnect</key>
 		<false/>
+		<key>On Mute</key>
+		<false/>
 		<key>On Sleep</key>
+		<false/>
+		<key>On Unmute</key>
 		<false/>
 		<key>On Wake</key>
 		<false/>

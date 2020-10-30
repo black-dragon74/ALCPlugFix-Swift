@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Debug</key>
-	<false/>
+	<true/>
 	<key>KeepAlive</key>
 	<true/>
 	<key>Label</key>

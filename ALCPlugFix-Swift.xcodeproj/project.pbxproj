@@ -33,7 +33,7 @@
 		0139EEFC253728E000D42E15 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		01821FC025372ECB009C92A3 /* ALCPlugFix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALCPlugFix.swift; sourceTree = "<group>"; };
 		01A752D125374D1700A7A109 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
-		01A752DA2537680E00A7A109 /* alc_295.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = alc_295.plist; sourceTree = "<group>"; };
+		01A752DA2537680E00A7A109 /* sample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = sample.plist; sourceTree = "<group>"; };
 		01A752DB2537694300A7A109 /* com.black-dragon74.ALCPlugFix.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "com.black-dragon74.ALCPlugFix.plist"; sourceTree = "<group>"; };
 		01B1AD1025370B3A009C072C /* ALCPlugFix-Swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ALCPlugFix-Swift"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B1AD1325370B3A009C072C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				01A752DB2537694300A7A109 /* com.black-dragon74.ALCPlugFix.plist */,
-				01A752DA2537680E00A7A109 /* alc_295.plist */,
+				01A752DA2537680E00A7A109 /* sample.plist */,
 				01A752D125374D1700A7A109 /* install.sh */,
 			);
 			path = Misc;

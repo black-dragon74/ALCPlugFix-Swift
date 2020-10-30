@@ -15,6 +15,7 @@ struct HDAVerbModel: Codable {
     let param: String               // The command for the node
     let onBoot: Bool                // Send verb on boot (at lauchd load actually)
     let onWake: Bool                // Send verb when machine wakes from sleep
+    let onSleep: Bool               // Send verb when machine goes to sleep
     let onConnect: Bool             // Send verb on headphone plug in
     let onDisconnect: Bool          // Send verb on headphone plug out
 
@@ -27,6 +28,7 @@ struct HDAVerbModel: Codable {
         case param = "Param"
         case onBoot = "On Boot"
         case onWake = "On Wake"
+        case onSleep = "On Sleep"
         case onConnect = "On Connect"
         case onDisconnect = "On Disconnect"
     }

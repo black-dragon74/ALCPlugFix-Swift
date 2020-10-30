@@ -32,8 +32,9 @@ class ALCPlugFix {
         listener.delegate = self
         listener.listen()
 
-        // Register ourselves as wake observer
-        NotificationCenter.default.addObserver(self, selector: #selector(handleWake(_:)), name: NSWorkspace.didWakeNotification, object: nil)
+        // Register ourselves as sleep and wake observer
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(handleSleep(_:)), name: NSWorkspace.willSleepNotification, object: nil)
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(handleWake(_:)), name: NSWorkspace.didWakeNotification, object: nil)
     }
 
     private func processOnBootVerbs() {
@@ -78,6 +79,15 @@ class ALCPlugFix {
         print("ALCPlugFix::machineDidWake")
         hdaVerbs.filter {
             $0.onWake && $0.enabled
+        }.forEach {
+            sendHDAVerb($0)
+        }
+    }
+    
+    @objc private func handleSleep(_ notification: NSNotification) {
+        print("ALCPlugFix::machineDidWake")
+        hdaVerbs.filter {
+            $0.onSleep && $0.enabled
         }.forEach {
             sendHDAVerb($0)
         }

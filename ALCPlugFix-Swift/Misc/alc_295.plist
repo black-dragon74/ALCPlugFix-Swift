@@ -15,6 +15,8 @@
 		<true/>
 		<key>On Disconnect</key>
 		<false/>
+		<key>On Sleep</key>
+		<false/>
 		<key>On Wake</key>
 		<false/>
 		<key>Param</key>

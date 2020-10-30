@@ -200,7 +200,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"${PROJECT_DIR}/${PROJECT_NAME}/Misc/\"\ncp install.sh \"${TARGET_BUILD_DIR}\"\ncp com.black-dragon74.ALCPlugFix.plist \"${TARGET_BUILD_DIR}\"\n\ncd \"${TARGET_BUILD_DIR}\"\n\ndist=(\"${FULL_PRODUCT_NAME}\")\ndist+=(\"install.sh\")\ndist+=(\"com.black-dragon74.ALCPlugFix.plist\")\n\narchive=\"${PRODUCT_NAME}-$(echo $CONFIGURATION | tr /a-z/ /A-Z/).zip\"\nrm -rf *.zip\nif [ \"$CONFIGURATION\" == \"Release\" ]; then\n  strip -x -T \"${EXECUTABLE_PATH}\" &>/dev/null || strip -x \"${EXECUTABLE_PATH}\"\nfi\nzip -qry -FS \"${archive}\" \"${dist[@]}\"\n";
+			shellScript = "cd \"${PROJECT_DIR}/${PROJECT_NAME}/Misc/\"\ncp install.sh \"${TARGET_BUILD_DIR}\"\ncp sample.plist \"${TARGET_BUILD_DIR}\"\ncp com.black-dragon74.ALCPlugFix.plist \"${TARGET_BUILD_DIR}\"\n\ncd \"${TARGET_BUILD_DIR}\"\n\ndist=(\"${FULL_PRODUCT_NAME}\")\ndist+=(\"install.sh\")\ndist+=(\"sample.plist\")\ndist+=(\"com.black-dragon74.ALCPlugFix.plist\")\n\narchive=\"${PRODUCT_NAME}-$(echo $CONFIGURATION | tr /a-z/ /A-Z/).zip\"\nrm -rf *.zip\nif [ \"$CONFIGURATION\" == \"Release\" ]; then\n  strip -x -T \"${EXECUTABLE_PATH}\" &>/dev/null || strip -x \"${EXECUTABLE_PATH}\"\nfi\nzip -qry -FS \"${archive}\" \"${dist[@]}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

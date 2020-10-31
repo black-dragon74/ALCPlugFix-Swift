@@ -25,12 +25,12 @@ class ALCPlugFix {
             exit(1)
         }
 
-        // If there are verbs to be sent on boot, now is the time
-        processOnBootVerbs()
-
         // Declare ourselves as the delegate and listen
         listener.delegate = self
         listener.listen()
+
+        // If there are verbs to be sent on boot, now is the time
+        processOnBootVerbs()
 
         // Register ourselves as sleep and wake observer
         NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(handleSleep(_:)), name: NSWorkspace.willSleepNotification, object: nil)
@@ -39,6 +39,7 @@ class ALCPlugFix {
 
     private func processOnBootVerbs() {
         print("ALCPlugFix::machineDidBoot")
+        listener.mutePropertyListenerBlock(inNumberAddresses: 0, inAddresses: &listener.muteAddress)
         hdaVerbs.filter {
             $0.onBoot && $0.enabled
         }.forEach {

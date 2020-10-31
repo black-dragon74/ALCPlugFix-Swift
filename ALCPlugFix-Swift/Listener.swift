@@ -27,7 +27,7 @@ class Listener {
         mScope: kAudioDevicePropertyScopeOutput,
         mElement: kAudioObjectPropertyElementMaster
     )
-    private var muteAddress = AudioObjectPropertyAddress(
+    var muteAddress = AudioObjectPropertyAddress(
         mSelector: kAudioDevicePropertyMute,
         mScope: kAudioDevicePropertyScopeOutput,
         mElement: kAudioObjectPropertyElementMaster

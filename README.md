@@ -15,6 +15,8 @@ Note: Requires AppleALC version 1.5.4+ or the patch of commit [61e2bbf](https://
 
 Download the appropriate version from the [Releases](https://github.com/black-dragon74/ALCPlugFix-Swift/releases/) and extract the zip file.
 
+Open the extracted folder and you will find a `sample.plist` file in there for reference. You need to edit it according to your codec. One you are done, copy the file somewhere safe (it should not be deleted as `ALCPlugFix-Swift` reads the config from it on boot). Also, this is the file you need to drag to the terminal window when `install.sh` asks you to do the same.
+
 Now open the `Terminal.app` and follow the instructions.
 ```sh
 # CD to the downloded directory

@@ -50,8 +50,8 @@ else
 fi
 
 # Set the logs to be ~/Library/Logs
-$pledit -c "Set StandardOutPath ${HOME}/Library/Logs/alcplugfix_stdout.log" ./com.black-dragon74.ALCPlugFix.plist || abort "Failed to write STDOUT logpath to plist"
-$pledit -c "Set StandardErrorPath ${HOME}/Library/Logs/alcplugfix_stderr.log" ./com.black-dragon74.ALCPlugFix.plist || abort "Failed to write STDERR logpath to plist"
+#$pledit -c "Set StandardOutPath ${HOME}/Library/Logs/alcplugfix_stdout.log" ./com.black-dragon74.ALCPlugFix.plist || abort "Failed to write STDOUT logpath to plist"
+#$pledit -c "Set StandardErrorPath ${HOME}/Library/Logs/alcplugfix_stderr.log" ./com.black-dragon74.ALCPlugFix.plist || abort "Failed to write STDERR logpath to plist"
 
 echo ""
 

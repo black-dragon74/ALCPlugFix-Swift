@@ -31,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		0139EEFC253728E000D42E15 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		013BF6022555730C0094BBBF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		01821FC025372ECB009C92A3 /* ALCPlugFix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALCPlugFix.swift; sourceTree = "<group>"; };
 		01A752D125374D1700A7A109 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		01A752DA2537680E00A7A109 /* sample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = sample.plist; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		01B1AD0725370B3A009C072C = {
 			isa = PBXGroup;
 			children = (
+				013BF6022555730C0094BBBF /* README.md */,
 				01B1AD1225370B3A009C072C /* ALCPlugFix-Swift */,
 				01B1AD1125370B3A009C072C /* Products */,
 				01B1AD3125372242009C072C /* Frameworks */,

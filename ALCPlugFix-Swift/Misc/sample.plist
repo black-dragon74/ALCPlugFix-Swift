@@ -24,7 +24,7 @@
 		<key>On Wake</key>
 		<false/>
 		<key>Param</key>
-		<string>0x20</string>
+		<string>0x24</string>
 		<key>Verb</key>
 		<string>SET_PIN_WIDGET_CONTROL</string>
 	</dict>

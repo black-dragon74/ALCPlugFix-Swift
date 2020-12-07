@@ -25,7 +25,7 @@ cd your_directory_here
 # Run the install.sh
 ./install.sh
 ```
-**Note:** AppleALC version 1.5.5+ require the boot-arg `alc-verbs=1` or the property `alc-verbs` to be present on `HDEF` in order for `ALCPlugFix-Swift` to work.
+**Note:** AppleALC version 1.5.5+ require the boot-arg `alcverbs=1` or the property `alc-verbs` to be present on `HDEF` in order for `ALCPlugFix-Swift` to work.
 
 ## Building
 

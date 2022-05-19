@@ -69,7 +69,7 @@ fileprivate let hdaVerbs: [String : UInt64] = [
 ]
 
 func getUint64Verb(from stringCommand: String) -> UInt64 {
-    return hdaVerbs[stringCommand] ?? 0
+    return hdaVerbs[stringCommand] ?? stringCommand.toUInt64()
 }
 
 extension String {
